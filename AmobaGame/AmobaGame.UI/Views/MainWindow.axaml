@@ -1,0 +1,78 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AmobaGame.UI.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:primitives="clr-namespace:Avalonia.Controls.Primitives;assembly=Avalonia.Controls"
+        mc:Ignorable="d"
+        x:Class="AmobaGame.UI.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Amoba - Avalonia UI"
+        Width="1100"
+        Height="760"
+        MinWidth="900"
+        MinHeight="640">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,*" Margin="16" RowSpacing="10">
+        <Border Grid.Row="0" Padding="12" CornerRadius="8" Background="#1E3A5F">
+            <TextBlock Text="Amoba Jatek - Avalonia UI" Foreground="White" FontSize="22" FontWeight="SemiBold"/>
+        </Border>
+
+        <Grid Grid.Row="1" ColumnDefinitions="Auto,90,Auto,Auto,Auto,*" ColumnSpacing="8">
+            <TextBlock Grid.Column="0" Text="Tabla meret (N):" VerticalAlignment="Center"/>
+            <TextBox Grid.Column="1" Text="{Binding BoardSizeInput}" HorizontalAlignment="Stretch"/>
+            <Button Grid.Column="2" Content="Uj jatek" Command="{Binding NewGameCommand}" MinWidth="110"/>
+            <TextBlock Grid.Column="3" Text="Aktualis:" VerticalAlignment="Center" Margin="8,0,0,0"/>
+            <TextBlock Grid.Column="4" Text="{Binding CurrentPlayerText}" VerticalAlignment="Center" FontWeight="Bold" FontSize="16"/>
+            <TextBlock Grid.Column="5" Text="{Binding MatchStatusText, StringFormat=Allapot: {0}}" VerticalAlignment="Center" Margin="12,0,0,0"/>
+        </Grid>
+
+        <Grid Grid.Row="2" ColumnDefinitions="Auto,220,Auto,Auto,Auto,Auto,90,Auto,90,*" ColumnSpacing="8">
+            <TextBlock Grid.Column="0" Text="Fajl:" VerticalAlignment="Center"/>
+            <TextBox Grid.Column="1" Text="{Binding SavePath}"/>
+            <Button Grid.Column="2" Content="Jatek mentese" Command="{Binding SaveGameCommand}" MinWidth="120"/>
+            <Button Grid.Column="3" Content="Jatek betoltese" Command="{Binding LoadGameCommand}" MinWidth="120"/>
+
+            <TextBlock Grid.Column="4" Text="Sor:" VerticalAlignment="Center" Margin="8,0,0,0"/>
+            <TextBox Grid.Column="5" Text="{Binding MoveRowInput}"/>
+            <TextBlock Grid.Column="6" Text="Oszlop:" VerticalAlignment="Center"/>
+            <TextBox Grid.Column="7" Text="{Binding MoveColumnInput}"/>
+            <Button Grid.Column="8" Content="X lepes" Command="{Binding XMoveCommand}" MinWidth="90"/>
+            <Button Grid.Column="9" Content="O lepes" Command="{Binding OMoveCommand}" MinWidth="90"/>
+        </Grid>
+
+        <Border Grid.Row="3" Padding="10" CornerRadius="6" Background="#F2F5F8">
+            <StackPanel Spacing="6">
+                <TextBlock Text="{Binding StatusMessage}" TextWrapping="Wrap" FontWeight="SemiBold"/>
+                <TextBlock Text="{Binding StatisticsText}" TextWrapping="Wrap"/>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="4" Padding="10" CornerRadius="8" BorderBrush="#D5DDE6" BorderThickness="1">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding Cells}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <primitives:UniformGrid Columns="{Binding BoardColumns}" RowSpacing="4" ColumnSpacing="4"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="vm:CellViewModel">
+                            <Button Command="{Binding ClickCommand}"
+                                    Content="{Binding Symbol}"
+                                    MinWidth="42"
+                                    MinHeight="42"
+                                    FontSize="16"
+                                    FontWeight="Bold"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Window>

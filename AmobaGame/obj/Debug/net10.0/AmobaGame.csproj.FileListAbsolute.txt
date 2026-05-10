@@ -1,0 +1,15 @@
+C:\Users\Dári Andrea\Desktop\Amoba-Homework\AmobaGame\bin\Debug\net10.0\AmobaGame.exe
+C:\Users\Dári Andrea\Desktop\Amoba-Homework\AmobaGame\bin\Debug\net10.0\AmobaGame.deps.json
+C:\Users\Dári Andrea\Desktop\Amoba-Homework\AmobaGame\bin\Debug\net10.0\AmobaGame.runtimeconfig.json
+C:\Users\Dári Andrea\Desktop\Amoba-Homework\AmobaGame\bin\Debug\net10.0\AmobaGame.dll
+C:\Users\Dári Andrea\Desktop\Amoba-Homework\AmobaGame\bin\Debug\net10.0\AmobaGame.pdb
+C:\Users\Dári Andrea\Desktop\Amoba-Homework\AmobaGame\obj\Debug\net10.0\AmobaGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dári Andrea\Desktop\Amoba-Homework\AmobaGame\obj\Debug\net10.0\AmobaGame.AssemblyInfoInputs.cache
+C:\Users\Dári Andrea\Desktop\Amoba-Homework\AmobaGame\obj\Debug\net10.0\AmobaGame.AssemblyInfo.cs
+C:\Users\Dári Andrea\Desktop\Amoba-Homework\AmobaGame\obj\Debug\net10.0\AmobaGame.csproj.CoreCompileInputs.cache
+C:\Users\Dári Andrea\Desktop\Amoba-Homework\AmobaGame\obj\Debug\net10.0\AmobaGame.sourcelink.json
+C:\Users\Dári Andrea\Desktop\Amoba-Homework\AmobaGame\obj\Debug\net10.0\AmobaGame.dll
+C:\Users\Dári Andrea\Desktop\Amoba-Homework\AmobaGame\obj\Debug\net10.0\refint\AmobaGame.dll
+C:\Users\Dári Andrea\Desktop\Amoba-Homework\AmobaGame\obj\Debug\net10.0\AmobaGame.pdb
+C:\Users\Dári Andrea\Desktop\Amoba-Homework\AmobaGame\obj\Debug\net10.0\AmobaGame.genruntimeconfig.cache
+C:\Users\Dári Andrea\Desktop\Amoba-Homework\AmobaGame\obj\Debug\net10.0\ref\AmobaGame.dll

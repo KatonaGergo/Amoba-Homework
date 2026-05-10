@@ -1,0 +1,34 @@
+Feladat az otthon maradóknak!
+
+Készítse el a következő programot, ami a következő héten (szerdán) be kell mutatnia!
+
+A bemutatóhoz használjon minimum 10 diából álló prezentációt!
+A bemutató két részre bontható.
+A rész
+felhasználói útmutató
+B rész
+a köd érdekesebb részeinek ismertetése
+Határidő: 2026.05.11.
+
+Leadás módja:
+Classroomon leadni a program repoját, ami tartalmazza a ppt-t.
+
+Feladat
+amőba játék
+Készítse el azt a programot, amiben menüpontok segítségével a következő feladatok elvégzésére van lehetőség.
+Új játék
+lehessen megadni a tábla méretét N X N , N békérésével
+Játék mentése
+az aktuális állapot mentése
+Játék betöltése
+mentett állás betöltése
+X lépés
+X jel táblára rakása
+O lépés
+O jel táblára rakása
+Statisztika
+információk a játékról
+Nézem utána az amőba játék szabályainak!
+
+Csak szabályos lépést lehessen tenni!
+Értékelje a játék véget!
