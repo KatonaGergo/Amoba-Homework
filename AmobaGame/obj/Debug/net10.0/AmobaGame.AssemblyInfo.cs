@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AmobaGame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3cef4465e10444cf4fac901e3c944b22f1ced56")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a71f36aca0deeda14c40260a43f213b4894d1740")]
 [assembly: System.Reflection.AssemblyProductAttribute("AmobaGame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AmobaGame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
