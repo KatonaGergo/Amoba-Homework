@@ -1,21 +1,21 @@
 using System.Text.Json;
 
-internal enum Cell
+enum Cell
 {
     Empty,
     X,
     O
 }
 
-internal enum GameStatus
-{
+enum GameStatus
+{   
     InProgress,
     XWon,
     OWon,
     Draw
 }
 
-internal sealed class GameState
+class GameState
 {
     public int Size { get; init; }
     public int RequiredToWin { get; init; }
@@ -28,7 +28,7 @@ internal sealed class GameState
     public DateTime? CompletedAtUtc { get; set; }
 }
 
-internal sealed class SaveModel
+class SaveModel
 {
     public int Size { get; set; }
     public int RequiredToWin { get; set; }
@@ -41,7 +41,7 @@ internal sealed class SaveModel
     public DateTime? CompletedAtUtc { get; set; }
 }
 
-internal static class Program
+class Program
 {
     private static readonly JsonSerializerOptions JsonOptions = new()
     {
@@ -70,35 +70,16 @@ internal static class Program
 
             switch (menuItem)
             {
-                case 1:
-                    StartNewGame();
-                    break;
-                case 2:
-                    SaveGame();
-                    break;
-                case 3:
-                    LoadGame();
-                    break;
-                case 4:
-                    MakeMove(Cell.X);
-                    break;
-                case 5:
-                    MakeMove(Cell.O);
-                    break;
-                case 6:
-                    PrintStatistics();
-                    break;
-                case 7:
-                    PrintBoard();
-                    break;
-                case 0:
-                    Console.WriteLine("Kilépés...");
-                    return;
-                default:
-                    WriteError("Nincs ilyen menüpont.");
-                    break;
+                case 1: StartNewGame(); break;
+                case 2: SaveGame(); break;
+                case 3: LoadGame(); break;
+                case 4: MakeMove(Cell.X); break;
+                case 5: MakeMove(Cell.O); break;
+                case 6: PrintStatistics(); break;
+                case 7: PrintBoard(); break;
+                case 0: Console.WriteLine("Kilépés..."); return;
+                default: WriteError("Nincs ilyen menüpont."); break;
             }
-
             Console.WriteLine();
         }
     }
@@ -453,7 +434,7 @@ internal static class Program
         Console.WriteLine($"- O lépések száma: {_game.OMoves}");
         Console.WriteLine($"- Üres mezők száma: {_game.Size * _game.Size - (_game.XMoves + _game.OMoves)}");
         Console.WriteLine($"- Következő játékos: {CellToChar(_game.CurrentPlayer)}");
-        Console.WriteLine($"- Állapot: {StatusToHungarian(_game.Status)}");
+        Console.WriteLine($"- Állapot: {Status(_game.Status)}");
         Console.WriteLine($"- Eltelt idő: {elapsed:hh\\:mm\\:ss}");
     }
 
@@ -512,7 +493,7 @@ internal static class Program
         };
     }
 
-    private static string StatusToHungarian(GameStatus status)
+    private static string Status(GameStatus status)
     {
         return status switch
         {

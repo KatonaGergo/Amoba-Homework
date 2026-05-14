@@ -1,0 +1,15 @@
+{
+  "Size": 3,
+  "RequiredToWin": 3,
+  "BoardRows": [
+    "...",
+    "...",
+    ".OX"
+  ],
+  "CurrentPlayer": "X",
+  "Status": "InProgress",
+  "XMoves": 1,
+  "OMoves": 1,
+  "StartedAtUtc": "2026-05-14T14:42:08.6923634Z",
+  "CompletedAtUtc": null
+}
